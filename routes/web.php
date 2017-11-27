@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('pages.landing');
 });
+
+Route::get('/game',function(){
+	return view('pages.clickme');
+})->name('game');

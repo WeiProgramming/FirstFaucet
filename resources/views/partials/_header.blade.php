@@ -1,6 +1,6 @@
 
 	<title>Happy @yield('title')</title>
-	<link rel="icon" href="../../public/favicon.ico">
+	<link rel="icon" href="url('favicon.ico')>
 	
 
 	<!-- Latest compiled and minified CSS -->
