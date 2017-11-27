@@ -9,9 +9,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body oncontextmenu="return false;">
-	<div id="banner"><div>Level 1</div></div>
+	<div id="banner"><div>Begin!</div></div>
 	<div id="scoreboard">Score: 0</div>
-	<div id="levelboard">Timer: 30</div>
+	<div id="levelboard">Timer: </div>
 
 	<div id="container">
 		<div id="button">Click</div>

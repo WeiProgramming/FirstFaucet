@@ -4,7 +4,7 @@
 	var $scoreboard = $('#scoreboard');
 	var $levelboard = $('#levelboard');
 	var $banner = $('div#banner');
-	var score = 0, level = 1, speed = 'fast';
+	var score = 0, speed = 'slow';
 
 	// Disable right-click on document
 	$(document).bind("contextmenu", function () {
@@ -27,7 +27,7 @@
 	$(window).trigger('resize');
 
 	// initial banner animation
-	animateBanner($banner);
+	animateBanner($banner);// this should be a click to begin
 
 	// on button click
 	$button.on('mousedown', function() {
@@ -42,24 +42,21 @@
 
 		animateScoreboard($scoreboard);
 
-		// level change
-		if ( (score === 10) || (score === 20) || (score === 30) ) {
 			// update level everywhere
-			level ++;
-			$levelboard.text('Level: ' + level);
-			$banner.find('div').text('Level ' + level);
+			$levelboard.text('Timer ' + score);
+			//timer should reset
+
 
 			// animateBanner with every level
-			animateBanner($banner, $container);
 
 
-			if ( score === 10 ) {
+			if ( score === 2 ) {
 				speed = 'medium';
 				$levelboard.css({'background': '#FFC90E'});
-			} else if ( score === 20 ) {
+			} else if ( score === 3 ) {
 				speed = 'fast';
 				$levelboard.css({'background': 'orange'});
-			} else if ( score === 30 ) {
+			} else if ( score === 4) {
 				speed = 'insane';
 				$levelboard.css({'background': '#ED1C24'});
 			}
@@ -69,7 +66,6 @@
 				'-moz-background-clip': 'content-box',
 				'background-clip': 'content-box'
 			});
-		}
 	});
 
 	// trigger movement
